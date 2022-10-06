@@ -2,7 +2,6 @@
 
 body {
     background-color: rgb(175, 165, 165);
-    display: block;
 }
 
 body img {
@@ -39,17 +38,17 @@ h1 {
 
 #button-random-color {
     position: absolute;
-    padding: 5px, 6px;
+    padding: 8px, 8px;
     top: 260px;
     left: 587px;
     border-radius: 10px;
     border: 1px solid black;
     width: 90px;
-    height: 40px;
+    height: 50px;
     background-color: rgb(75, 83, 83);
     font-family: 'Lobster', cursive, 'Pacifico', cursive;
+    font-size: 15px;
     color: white;
-    display: block;
 }
 
 #reset {
@@ -92,4 +91,22 @@ h1 {
     font-family: 'Lobster', cursive, 'Pacifico', cursive;
     color: white;
     
+}
+
+#pixel-board {
+    width: 210px;
+    height: 230px;
+    position: absolute;
+    top: 350px;
+    margin-left: 520px;
+}
+
+.pixel {
+   border: 1px solid black;
+   display: inline-flex;
+   flex-direction: row;
+   height: 40px;
+   width: 40px;
+   background-color: white;
+   border-radius: 100%;
 }
