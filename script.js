@@ -34,19 +34,6 @@ const buttonAleatorio = document.getElementById('button-random-color');
 // Adicionando evento ao clicar o botão.
 buttonAleatorio.addEventListener('click', coresAleatorias);
 
-// Elaborando função para gerar cores aleatórias ao clicar o botão.
-// if (localStorage.corAleatoria1) {
-//     div2.value = localStorage.corAleatoria1;
-// }
-
-// if (localStorage.corAleatoria2) {
-//     div3.value = localStorage.corAleatoria2;
-// }
-
-// if (localStorage.corAleatoria3) {
-//     div4.value = localStorage.corAleatoria3;
-// }
-
 function coresAleatorias() {
 
     let color1 = Math.floor(Math.random() * 350);
@@ -100,3 +87,20 @@ for (let i = 1; i <= 5; i += 1) {
         divCores.className = 'pixel';
     }
 }
+
+divPreta.classList.add('selected');
+
+function capturaACor (param){
+    let captura = event.target.param;
+    
+}
+divPreta.addEventListener('click', capturaACor);
+
+// Definindo cor preta como selecionada.
+
+function corInicialPreta () {
+    const corPreta = document.getElementsByClassName('selected')[0];
+    return window.getComputedStyle(corPreta).backgroundColor;
+}
+
+
