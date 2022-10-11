@@ -87,20 +87,50 @@ for (let i = 1; i <= 5; i += 1) {
         divCores.className = 'pixel';
     }
 }
-
+// Adicionando classe para cor preta.
 divPreta.classList.add('selected');
-
-function capturaACor (param){
-    let captura = event.target.param;
-    
-}
-divPreta.addEventListener('click', capturaACor);
 
 // Definindo cor preta como selecionada.
 
-function corInicialPreta () {
+function corInicialPreta() {
     const corPreta = document.getElementsByClassName('selected')[0];
     return window.getComputedStyle(corPreta).backgroundColor;
 }
 
+// Retirando e colocando classe selected.
+function selected() {
+    const cores = document.querySelectorAll('.color');
+    for (cor of cores) {
+        cor.addEventListener('click', function (event) {
+            const selecao = document.getElementsByClassName('selected')[0];
+            selecao.classList.remove('selected');
+            event.target.classList.add('selected');
+        });
+    }
+}
+selected();
 
+function pintando() {
+    const pixels = document.querySelectorAll('.pixel');
+    for (pi of pixels) {
+        pi.addEventListener('click', function (event) {
+            const selecao2 = document.querySelector('.selected');
+            event.target.style.backgroundColor = selecao2.style.backgroundColor;
+        });
+    }
+}
+pintando();
+
+
+// Adicionando evento no botão clicar.
+
+function limpando() {
+    const botaoLimpar = document.getElementById('clear-board');
+    const pixels = document.querySelectorAll('.pixel');
+    for (pix of pixels) {
+        botaoLimpar.addEventListener('click', function (){
+            pix.style.backgroundColor = 'white';
+        });
+    }
+}
+limpando();

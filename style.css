@@ -51,19 +51,20 @@ h1 {
     color: white;
 }
 
-#reset {
+#clear-board {
     position: absolute;
     padding: 5px;
     top: 260px;
-    left: 670px;
+    left: 690px;
     border-radius: 10px;
     border: 1px solid black;
-    width: 80px;
-    height: 40px;
+    width: 90px;
+    height: 50px;
     background-color: rgb(75, 83, 83);
     font-family: 'Lobster', cursive, 'Pacifico', cursive;
     color: white;
     display: block;
+    font-size: 15px;
 }
 
 #bordaInput {
