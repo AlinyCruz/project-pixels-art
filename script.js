@@ -110,6 +110,7 @@ function selected() {
 }
 selected();
 
+// Pintando a paleta.
 function pintando() {
     const pixels = document.querySelectorAll('.pixel');
     for (pi of pixels) {
@@ -121,16 +122,14 @@ function pintando() {
 }
 pintando();
 
-
 // Adicionando evento no botão clicar.
-
 function limpando() {
-    const botaoLimpar = document.getElementById('clear-board');
-    const pixels = document.querySelectorAll('.pixel');
-    for (pix of pixels) {
-        botaoLimpar.addEventListener('click', function (){
-            pix.style.backgroundColor = 'white';
-        });
-    }
+    const botaoLimpar = document.querySelector('#clear-board');
+    botaoLimpar.addEventListener('click', function (){
+        const pixels = document.querySelectorAll('.pixel');
+        for (let pix = 0; pix < pixels.length; pix += 1) {
+            pixels[pix].style.backgroundColor = 'white';
+        }
+    })
 }
 limpando();
